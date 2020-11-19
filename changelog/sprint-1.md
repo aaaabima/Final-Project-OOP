@@ -1,24 +1,27 @@
 # Scrum Report (Sprint 1)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 18/11/2020 to 24/11/2020
 
-## Team (Insert your name)
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Lorem Ipsum |
+## Team Chain-~-Box
+| NPM           | Name                            |
+| ------------- |-------------------------------- |
+| 140810190013  | Syakira Rahma Fauziah           |
+| 140810190021  | Mochammad Ghifari Eka Narayana  |
+| 140810190031  | Mochamad Arya Bima Agfian       |
+| 140810190051  | Salma Tri Audryani              |
 
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 4             | n             |
 
 ## Sprint 1 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Preparing the x | Jane Doe | DONE |
-| 1.2 | Make the x | John Doe | FAILED |
+| 1.1 | Implementasi OOP Dasar | Ghifa | TBD | 
+| 1.2 | Pembuatan Class UI JFrame | Salma | TBD | 
+| 1.3 | Pembuatan Class ClickListener | Syakira | TBD | 
+| 1.4 | Pembuatan Main Object Puzzle | Abim | TBD | 
 
 ## Retrospective 
 

@@ -1,12 +1,13 @@
 # Scrum Report (Sprint 2)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 25/11/2020 to 01/12/2020
 
-## Team (Insert your name)
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Lorem Ipsum |
+## Team Chain-~-Box
+| NPM           | Name                            |
+| ------------- |-------------------------------- |
+| 140810190013  | Syakira Rahma Fauziah           |
+| 140810190021  | Mochammad Ghifari Eka Narayana  |
+| 140810190031  | Mochamad Arya Bima Agfian       |
+| 140810190051  | Salma Tri Audryani              |
 
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
