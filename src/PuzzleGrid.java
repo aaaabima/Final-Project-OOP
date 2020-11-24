@@ -1,3 +1,11 @@
+/*
+| NPM           | Name                            |
+| ------------- |-------------------------------- |
+| 140810190013  | Syakira Rahma Fauziah           |
+| 140810190021  | Mochammad Ghifari Eka Narayana  |
+| 140810190031  | Mochamad Arya Bima Agfian       |
+| 140810190051  | Salma Tri Audryani              |
+*/
 package src;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
