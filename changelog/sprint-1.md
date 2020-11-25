@@ -18,10 +18,10 @@
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Implementasi OOP Dasar | Ghifa | TBD | 
-| 1.2 | Pembuatan Class UI JFrame | Salma | TBD | 
-| 1.3 | Pembuatan Class ClickListener | Syakira | TBD | 
-| 1.4 | Pembuatan Main Object Puzzle | Abim | TBD | 
+| 1.1 | Implementasi OOP Dasar | Ghifa | DONE | 
+| 1.2 | Pembuatan Class UI JFrame | Salma | DONE | 
+| 1.3 | Pembuatan Class ClickListener | Syakira | DONE | 
+| 1.4 | Pembuatan Main Object Puzzle | Abim | DONE | 
 
 ## Retrospective 
 
