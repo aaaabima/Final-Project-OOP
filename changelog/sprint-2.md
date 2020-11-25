@@ -12,14 +12,15 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 3             | n             |
 
 ## Sprint 2 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 2.1 | Preparing the x | Jane Doe | DONE |
-| 2.2 | Make the x | John Doe | FAILED |
+| 2.1 | Pembuatan Logic Game | Abim & Ghifa | TO;DO |
+| 2.2 | Reset Button | Syakira | TO;DO |
+| 2.3 | Implementasi reset button di UI | Salma | TO;DO |
 
 ## Retrospective 
 

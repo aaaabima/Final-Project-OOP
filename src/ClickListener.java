@@ -6,7 +6,7 @@
 | 140810190031  | Mochamad Arya Bima Agfian       |
 | 140810190051  | Salma Tri Audryani              |
 */
-package src;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;

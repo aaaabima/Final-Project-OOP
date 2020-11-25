@@ -1,4 +1,4 @@
-# Project Name
+# Puzzle15
 
 This repository is a final project (Java GUI) from Object-Oriented Programming Class, Teknik Informatika Universitas Padjadjaran. 
 

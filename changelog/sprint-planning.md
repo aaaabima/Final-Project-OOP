@@ -32,13 +32,5 @@
 | 1.3 | Pembuatan Class ClickListener | Syakira | 
 | 1.4 | Pembuatan Main Object Puzzle | Abim | 
 
-## Sprint Backlog Plan (Sprint 2)
-| ID  | Title/Desc | Asignee | 
-| --- | ---------- | ------- | 
-| 2.1 | Pembuatan Logic Game | Abim & Ghifa | 
-| 2.2 | Reset Button | Syakira | 
-| 2.3 | Implementasi reset button di UI | Salma | 
-
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
