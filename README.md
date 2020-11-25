@@ -19,7 +19,10 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
    - Diskusi awal, penyusunan sprint backlog, mencari referensi.
 
 - **[Sprint 1](changelog/sprint-1.md) - (18 November 2020 - 24 November 2020)** 
-   - TBD
+   - Implementasi OOP Dasar
+   - Pembuatan Class UI JFrame
+   - Pembuatan Class ClickListener
+   - Pembuatan Main Object Puzzle
    
 - **[Sprint 2](changelog/sprint-2.md) - (25 November 2020 - 1 December 2020)** 
    - TBD
