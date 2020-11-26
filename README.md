@@ -4,7 +4,7 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 [Challenge Guidelines](challenge-guideline.md)
 
-**Puzzle 15 adalah sebuah game puzzle geser yang terdiri dari beberapa tile bernomor yang tersusun secara acak. Terdapat 1 tile yang hilang sebagai space untuk menggeser tiles bernomor. Game ini bertujuan untuk menyusun tile bernomor acak menjadi berurutan. Ukuran puzzle ini 4x4 dengan 1 tile kosong sehingga berjumlah 15 sehingga disebut puzzle 15.**
+**Puzzle 15 adalah sebuah game puzzle geser yang terdiri dari beberapa *tile* bernomor yang tersusun secara acak. Terdapat 1 *tile* yang hilang sebagai space untuk menggeser *tile*s bernomor. Game ini bertujuan untuk menyusun *tile* bernomor acak menjadi berurutan. Ukuran puzzle ini 4x4 dengan 1 *tile* kosong sehingga berjumlah 15 sehingga disebut puzzle 15.**
 
 ## Credits
 | NPM           | Name                            |
@@ -32,14 +32,55 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 ## Running The App
 
-TBD
+Main file `Puzzle.java` atau Puzzle 15 kami dapat dijalankan dengan tiga cara : 
 
+ ### 1.Menjalankan tanpa parameter 
+
+ ``` 
+ java Puzzle 
+ ``` 
+
+ Ketika dijalankan seperti ini, puzzle akan berupa grid dengan angka 1-15 yang harus disusun berurutan untuk menyelesaikannya.
+
+ ### 2. Menjalankan dengan sebuah int sebagai parameter
+
+ ```
+ java Puzzle 5
+ ```
+
+ Ketika dijalankan seperti ini, puzzle akan membentuk grid 5x5 dengan masing-masing *tile* berisi angka 1-24. User harus mengurutkan angka 1-24 untuk menyelesaikannya.
+
+ ### 3. Menjalankan dengan dua parameter (int dan String)
+
+ ```
+ java Puzzle 3 rem
+ ```
+
+ Ketika dijalankan seperti ini, puzzle akan membentuk grid 3x3 dengan isi *tile* berupa potongan gambar dari mode "rem". User harus mengurutkan puzzle berdasarkan gambar yang dipecah ini. Untuk mode yang dapat dimainkan akan dicantumkan di **[Notable Assumption and Design App Details]**.
 ## Classes Used
 
-TBD
+1. **Puzzle (Main program)** - `Puzzle.java` 
+   - Main program di mana Puzzle15 berjalan berdasarkan UI. 
+
+2. **UserInterface** - `UserInterface.java` 
+   - Objek yang menjadi frame Puzzle15 
+
+3. **PuzzleGrid** - `PuzzleGrid.java` 
+   - Objek yang mengekstensi `JPanel` dan menjadi kanvas untuk seluruh *tile* puzzle. 
+
+4. **ClickListener** - `ClickListener.java` 
+   - Objek yang mengekstensi `MouseAdapter` dan menjadi responden untuk pergerakan serta semua *click* di UserInterface. 
+
+5. **Logic** - `Logic.java` 
+   - Objek yang menyimpan logika memulai dan mengakhiri game Puzzle15. 
+
 
 UML image here
 
-## Notable Assumption and Design App Details
+## Notable Assumption and Design App Details 
 
-TBD
+- Desain Aplikasi 
+   - Rekomendasi ukuran game adalah 3x3, 4x4, dan 5x5. 
+   - Resolusi PuzzleGrid paling optimal untuk penggunaan 2 argumen adalah 800x800. 
+   - Untuk *Running the App* poin ke-3. Argumen int yang mungkin digunakan adalah 3, 4, dan 5. 
+   - Untuk *Running the App* poin ke-3. Argumen String yang mungkin digunakan untuk saat ini adalah `rem`, `miku`, dan `hina`. 
