@@ -9,7 +9,7 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 ## Credits
 | NPM           | Name                            |
 | ------------- |-------------------------------- |
-| 140810190013  | Syakira Rahma Fauziah           |
+| 140810190013  | Syakira Rahma Fauziyah          |
 | 140810190021  | Mochammad Ghifari Eka Narayana  |
 | 140810190031  | Mochamad Arya Bima Agfian       |
 | 140810190051  | Salma Tri Audryani              |
@@ -25,7 +25,9 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
    - Pembuatan Main Object Puzzle
    
 - **[Sprint 2](changelog/sprint-2.md) - (25 November 2020 - 1 December 2020)** 
-   - TBD
+   - Pembuatan Logic Game
+   - Reset Button
+   - Implementasi Reset Button di UI
    
 - **[Sprint 3](changelog/sprint-3.md) - (2 December 2020 - 8 December 2020)** 
    - TBD
@@ -81,6 +83,15 @@ UML image here
 
 - Desain Aplikasi 
    - Rekomendasi ukuran game adalah 3x3, 4x4, dan 5x5. 
-   - Resolusi PuzzleGrid paling optimal untuk penggunaan 2 argumen adalah 800x800. 
+   - Resolusi PuzzleGrid paling optimal untuk penggunaan 2 argumen adalah 600x600. 
    - Untuk *Running the App* poin ke-3. Argumen int yang mungkin digunakan adalah 3, 4, dan 5. 
-   - Untuk *Running the App* poin ke-3. Argumen String yang mungkin digunakan untuk saat ini adalah `rem`, `miku`, dan `hina`. 
+   - Untuk *Running the App* poin ke-3. Argumen String yang mungkin digunakan untuk saat ini berjumlah 8. 
+      1. `rem` 
+      2. `miku` 
+      3. `hina` 
+      4. `astolfo` 
+      5. `inanis` 
+      6. `watson` 
+      7. `yunyun` 
+      8. `eriri` 
+   

@@ -1,7 +1,7 @@
 /*
 | NPM           | Name                            |
 | ------------- |-------------------------------- |
-| 140810190013  | Syakira Rahma Fauziah           |
+| 140810190013  | Syakira Rahma Fauziyah          |
 | 140810190021  | Mochammad Ghifari Eka Narayana  |
 | 140810190031  | Mochamad Arya Bima Agfian       |
 | 140810190051  | Salma Tri Audryani              |
@@ -12,7 +12,7 @@ import java.util.Random;
 public class Logic {
     private int nbTiles;        //jumlah tiles yang ada pada game
     private int[] tiles;        //tiles memiliki nilai index unique
-                                //bernilai true jika game puzzle sudah selesai, isSolved
+
     public Logic(){
 
     }

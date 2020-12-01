@@ -86,7 +86,7 @@ public class ClickListener extends MouseAdapter{
                 }
 
                 //jika semua tiles berada di tempat yang seharusnya, maka gameOver
-                if(login.isSolved(this.tiles)){
+                if(logic.isSolved(this.tiles)){
                     pg.setGameOver();
                     this.gameOver = true;
                 }
