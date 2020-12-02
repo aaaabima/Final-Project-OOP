@@ -26,28 +26,28 @@ public class UserInterface implements Runnable{
   private int margin; 
 
   public UserInterface(int size, int dim, int mar, String mode){
-      this.pg = new PuzzleGrid(size, dim, mar, mode);
-      this.dimension = dim;
-      this.margin = mar;
+    this.pg = new PuzzleGrid(size, dim, mar, mode);
+    this.dimension = dim;
+    this.margin = mar;
   }
 
   public void run(){
-      frame = new JFrame("Puzzle-15");
-      
-      frame.setPreferredSize(new Dimension(dimension, dimension + margin));
-      frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    frame = new JFrame("Puzzle-15");
+    
+    frame.setPreferredSize(new Dimension(dimension, dimension + margin));
+    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-      createComponents(frame.getContentPane());
+    createComponents(frame.getContentPane());
 
-      frame.pack();
-      frame.setVisible(true);
+    frame.pack();
+    frame.setVisible(true);
   }
 
   private void createComponents(Container container){
-      container.add(pg, BorderLayout.CENTER);
+    container.add(pg, BorderLayout.CENTER);
   }
 
   public JFrame getFrame(){
-      return frame;
+    return frame;
   }
 }
