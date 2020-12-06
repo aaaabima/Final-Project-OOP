@@ -10,6 +10,7 @@
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.FontMetrics;
@@ -43,6 +44,10 @@ public class PuzzleGrid extends JPanel{
   private int margin; 
   // Ukuran grid UI untuk puzzle
   private int gridSize; 
+  // Jumlah klik selama satu sesi game
+  private int clickNum;
+  // Jumlah klik paling sedikit yang dibutuhkan untuk menyelesaikan game
+  private int highScore;
   // Bernilai true jika game berakhir
   private boolean gameOver;
   // Mengecek apakah user menggunakan default puzzle atau tidak
@@ -56,16 +61,17 @@ public class PuzzleGrid extends JPanel{
 
   public PuzzleGrid(int size, int dim, int mar, String mode){
     // Mengaktifkan custom jika 'mode' bukanlah sebuah string kosong
-    if(mode != ""){
-      this.custom = true;
-    } else {
-      this.custom = false;
-    }
+    if(mode.equals(""))
+      custom = false;
+    else 
+      custom = true;
 
     this.size = size;
     this.dimension = dim;
     this.margin = mar;
     this.mode = mode;
+    this.clickNum = 0;
+    this.highScore = 9999;
 
     // Menghitung jumlah tile
     this.nbTiles = size * size - 1; // Jumlah tile tidak termasuk bagian <blank>
@@ -80,10 +86,10 @@ public class PuzzleGrid extends JPanel{
     this.cl = new ClickListener(this);
 
     // Mengatur ukuran PuzzleGrid berdasarkan dimension
-    setPreferredSize(new Dimension(dimension, dimension + margin));
+    setPreferredSize(new Dimension(dimension + 200, dimension + margin));
     setBackground(Color.WHITE);
     setForeground(FOREGROUND_COLOR);
-    setFont(new Font("Courier New", Font.BOLD, 50));
+    setFont(new Font("Courier New", Font.BOLD, 30));
 
     // Set gameOver di construct agar game dapat dimainkan
     gameOver = true;
@@ -97,11 +103,19 @@ public class PuzzleGrid extends JPanel{
     reset.addActionListener(new ActionListener(){
       @Override
       public void actionPerformed(ActionEvent ae){
-        newGame();
-        repaint();
+        // Jika tiles yang bernilai 0 tidak di posisi akhir, akan memunculkan error message
+        if(tiles[size*size - 1] != 0)
+          JOptionPane.showMessageDialog(null, 
+                                        "Pindahkan posisi kosong ke ujung kanan bawah sebelum mereset!", 
+                                        "Tidak bisa reset!", 
+                                        JOptionPane.ERROR_MESSAGE,
+                                        new ImageIcon("../img/error.png"));
+        else{
+          newGame();
+          repaint();
+        }
       }
     });
-
     // Memulai game
     newGame();
   }
@@ -112,8 +126,8 @@ public class PuzzleGrid extends JPanel{
       g.setFont(getFont().deriveFont(Font.BOLD, 18));
       g.setColor(FOREGROUND_COLOR);
       String s = "Klik di mana saja untuk memulai game.";
-      g.drawString(s, (getWidth() - g.getFontMetrics().stringWidth(s)) / 2, 
-                    getHeight() - margin);
+      g.drawString(s, ((getWidth() - g.getFontMetrics().stringWidth(s)) / 2) - 90, 
+                    getHeight() - margin + 5);
     }
   }
 
@@ -124,6 +138,30 @@ public class PuzzleGrid extends JPanel{
     int desc = fm.getDescent();
     g.drawString(s, x + (tileSize - fm.stringWidth(s)) /2,
                   y + (asc +(tileSize - (asc + desc)) / 2));
+  }
+  
+  // Menampilkan highscore di board
+  private void drawHighScore(Graphics2D g){
+    g.setFont(getFont().deriveFont(Font.BOLD, 20));
+    g.setColor(FOREGROUND_COLOR);
+    g.drawString("High Score", dimension + 15, (int) (0.55*dimension));
+    g.drawString(String.valueOf(this.highScore), dimension + 70, (int) (0.6*dimension));
+  }
+  
+  // Menampilkan jumlah klik user selama satu sesi game
+  private void drawClickNum(Graphics2D g){
+    g.setFont(getFont().deriveFont(Font.BOLD, 20));
+    g.setColor(FOREGROUND_COLOR);
+    g.drawString("Click Numbers", dimension, (int) (0.65*dimension));
+    g.drawString(String.valueOf(this.clickNum), (dimension + 70), (int) (0.7*dimension));
+  }
+
+  // Menggambar contoh gambar ketika mode custom
+  private void drawExample(Graphics2D g){
+    if(custom){
+      g.drawImage(new ImageIcon("../img/" + String.valueOf(size) + "/" + mode + "/example.png").getImage(),
+      dimension, (int) (dimension*0.3), new ImageIcon("../img/" + String.valueOf(size) + "/" + mode + "/example.png").getImageObserver());
+    }
   }
 
   // Menggambar keseluruhan grid berdasarkan size
@@ -142,7 +180,7 @@ public class PuzzleGrid extends JPanel{
         if(gameOver){
           g.setColor(FOREGROUND_COLOR);
           drawNumber(g, "Done!", x, y);
-          // Ketika custom aktif, dalam kata lain "mode" memiliki isi parameter,
+          // Ketika custom aktif, dalam kata lain "mode" memiliki isi parameter yang sesuai,
           // maka angka di atas akan di-overwrite menggunakan mode gambar yang diinput
           if(custom){
             g.drawImage(new ImageIcon("../img/" + String.valueOf(size) + "/" + mode + "/" + String.valueOf(size * size) + ".png").getImage(),
@@ -161,8 +199,9 @@ public class PuzzleGrid extends JPanel{
 
       // By Default, tile akan diisi menggunakan angka yang menjadi value tiles[i]
       drawNumber(g, String.valueOf(tiles[i]), x, y);
-      // Ketika custom aktif, dalam kata lain "mode" memiliki isi parameter,
-      // maka angka di atas akam di-overwrite menggunakan mode gambar yang diinput
+
+      // Ketika custom aktif, dalam kata lain "mode" memiliki isi parameter yang sesuai,
+      // maka angka di atas akan di-overwrite menggunakan mode gambar yang diinput
       if(custom){
         g.drawImage(new ImageIcon("../img/" + String.valueOf(size) + "/" + mode + "/" + String.valueOf(tiles[i]) + ".png").getImage(),
         x, y, new ImageIcon("../img/" + String.valueOf(size) + "/" + mode + "/" + String.valueOf(tiles[i]) + ".png").getImageObserver());
@@ -187,6 +226,9 @@ public class PuzzleGrid extends JPanel{
 
     // Menyimpan blankPos di posisi teralhir dari array
     blankPos = tiles.length - 1;
+
+    // Menyimpan nilai 0 untuk clickNum
+    this.clickNum = 0;
   }
 
   private void shuffle(){
@@ -219,6 +261,16 @@ public class PuzzleGrid extends JPanel{
   public void setGameOver(){
     this.gameOver = true;
   }
+  public void addClickNum(){
+    this.clickNum++;
+  }
+  public int getClickNum(){
+    return this.clickNum;
+  }
+  public void setHighScore(int clickNum){
+    if(clickNum < this.highScore)
+      this.highScore = clickNum;
+  }
 
   // Paint panel menggunakan method ini
   @Override
@@ -228,5 +280,10 @@ public class PuzzleGrid extends JPanel{
     gtd.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     drawGrid(gtd);
     drawStart(gtd);
+    // Menggambar clickNum di method ini
+    drawClickNum(gtd);
+    // Menggambar highscore di method ini
+    drawHighScore(gtd);
+    drawExample(gtd);
   }
 }

@@ -51,6 +51,7 @@ public class ClickListener extends MouseAdapter{
 
   @Override
   public void mousePressed(MouseEvent e){
+
     // Menyesuaikan gameStatus di PuzzleGrid
     gameOver = pg.getGameStatus();
     if(gameOver){
@@ -93,10 +94,13 @@ public class ClickListener extends MouseAdapter{
         }
         while(blankPos != clickPos);
         tiles[blankPos] = 0;
+        pg.addClickNum(); // Menambah clickNum di PuzzleGrid
         }
 
         // Jika semua tiles berada di tempat yang seharusnya, maka gameOver
         if(logic.isSolved(this.tiles)){
+          // Set highscore di PuzzleGrid
+          pg.setHighScore(pg.getClickNum());
           pg.setGameOver();
           this.gameOver = true;
         }

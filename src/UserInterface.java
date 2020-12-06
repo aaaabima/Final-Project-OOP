@@ -34,8 +34,9 @@ public class UserInterface implements Runnable{
   public void run(){
     frame = new JFrame("Puzzle-15");
     
-    frame.setPreferredSize(new Dimension(dimension, dimension + margin));
+    frame.setPreferredSize(new Dimension(dimension + 200, dimension + margin));
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    frame.setResizable(false);
 
     createComponents(frame.getContentPane());
 

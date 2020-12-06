@@ -22,7 +22,7 @@ public class Puzzle {
       playMode = "";
     } else {
       playSize = Integer.parseInt(args[0]);
-      playMode = args[1];
+      playMode = args[1].toLowerCase();
     }
     // Construct UI(size, dimension, margin, mode)
     UserInterface ui = new UserInterface(playSize, 700, 50, playMode);

@@ -94,4 +94,5 @@ UML image here
       6. `watson` 
       7. `yunyun` 
       8. `eriri` 
-   
+   - Game memiliki fitur *number of clicks* dan *high score* sebagai tambahan. *High score* adalah *number of clicks* paling sedikit yang dibutuhkan untuk menyelesaikan puzzle tersebut selama satu sesi.
+   - Ketika puzzle dimainkan dengan mode *custom*, akan ada **example** yang merupakan hasil akhir ketika puzzle tersusun dengan rapih. 

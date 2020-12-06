@@ -12,16 +12,19 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 4             | 3             |
 
 ## Sprint 3 Backlog
 
-| ID  | Title/Desc | Asignee | Status |
-| --- | ---------- | ------- | ------ |
-| 3.1 | Preparing the x | Jane Doe | DONE |
-| 3.2 | Make the x | John Doe | FAILED |
+| ID  | Title/Desc | Asignee | Status | 
+| --- | ---------- | ------- | ------ | 
+| 3.1 | Implementasi Main | Abim | DONE | 
+| 3.2 | Error Handling | Syakira | DONE | 
+| 3.3 | Trial Challenge | Salma | FAILED | 
+| 3.4 | Finishing | Ghifa | DONE | 
 
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
-
+1. Anggota kelompok tersibukkan projek dari mata kuliah lain. 
+2. Deskripsi tugas sprint 3 terlalu general karena bingung dengan fitur tambahan lain.
+3. Banyak fitur tambahan yang baru terpikirkan setelah sprint 2.
