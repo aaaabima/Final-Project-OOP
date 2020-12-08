@@ -25,6 +25,6 @@
 
 ## Retrospective 
 
-1. Anggota kelompok tersibukkan projek dari mata kuliah lain. 
+1. Anggota kelompok tersibukkan kegiatan baik akademik maupun non-akademik lainnya.
 2. Deskripsi tugas sprint 3 terlalu general karena bingung dengan fitur tambahan lain.
 3. Banyak fitur tambahan yang baru terpikirkan setelah sprint 2.

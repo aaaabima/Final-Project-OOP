@@ -103,12 +103,12 @@ public class PuzzleGrid extends JPanel{
     reset.addActionListener(new ActionListener(){
       @Override
       public void actionPerformed(ActionEvent ae){
-        // Jika tiles yang bernilai 0 tidak di posisi akhir, akan memunculkan error message
+        // Jika tiles yang bernilai 0 tidak di posisi akhir, akan memunculkan warning message
         if(tiles[size*size - 1] != 0)
           JOptionPane.showMessageDialog(null, 
                                         "Pindahkan posisi kosong ke ujung kanan bawah sebelum mereset!", 
                                         "Tidak bisa reset!", 
-                                        JOptionPane.ERROR_MESSAGE,
+                                        JOptionPane.WARNING_MESSAGE,
                                         new ImageIcon("../img/error.png"));
         else{
           newGame();
@@ -284,6 +284,7 @@ public class PuzzleGrid extends JPanel{
     drawClickNum(gtd);
     // Menggambar highscore di method ini
     drawHighScore(gtd);
+    // Menggambar example di method ini
     drawExample(gtd);
   }
 }

@@ -30,7 +30,10 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
    - Implementasi Reset Button di UI
    
 - **[Sprint 3](changelog/sprint-3.md) - (2 December 2020 - 8 December 2020)** 
-   - TBD
+   - Implementasi Main
+   - Error Handling
+   - Trial Challenge
+   - Finishing
 
 ## Running The App
 
@@ -58,14 +61,14 @@ Main file `Puzzle.java` atau Puzzle 15 kami dapat dijalankan dengan tiga cara :
  java Puzzle 3 rem
  ```
 
- Ketika dijalankan seperti ini, puzzle akan membentuk grid 3x3 dengan isi *tile* berupa potongan gambar dari mode "rem". User harus mengurutkan puzzle berdasarkan gambar yang dipecah ini. Untuk mode yang dapat dimainkan akan dicantumkan di **[Notable Assumption and Design App Details]**.
+ Ketika dijalankan seperti ini, puzzle akan membentuk grid 3x3 dengan isi *tile* berupa potongan gambar dari mode "rem". User harus mengurutkan puzzle berdasarkan gambar yang dipecah ini. Untuk mode yang dapat dimainkan akan dicantumkan di **[Notable Assumption and Design App Details]**. User juga akan disajikan oleh gambar sudah jadi dari mode yang dipilih. 
 ## Classes Used
 
 1. **Puzzle (Main program)** - `Puzzle.java` 
    - Main program di mana Puzzle15 berjalan berdasarkan UI. 
 
 2. **UserInterface** - `UserInterface.java` 
-   - Objek yang menjadi frame Puzzle15 
+   - Objek yang menjadi frame Puzzle15. 
 
 3. **PuzzleGrid** - `PuzzleGrid.java` 
    - Objek yang mengekstensi `JPanel` dan menjadi kanvas untuk seluruh *tile* puzzle. 
@@ -76,8 +79,7 @@ Main file `Puzzle.java` atau Puzzle 15 kami dapat dijalankan dengan tiga cara :
 5. **Logic** - `Logic.java` 
    - Objek yang menyimpan logika memulai dan mengakhiri game Puzzle15. 
 
-
-UML image here
+![UML](/img/UML.png)
 
 ## Notable Assumption and Design App Details 
 
@@ -85,7 +87,7 @@ UML image here
    - Rekomendasi ukuran game adalah 3x3, 4x4, dan 5x5. 
    - Resolusi PuzzleGrid paling optimal untuk penggunaan 2 argumen adalah 600x600. 
    - Untuk *Running the App* poin ke-3. Argumen int yang mungkin digunakan adalah 3, 4, dan 5. 
-   - Untuk *Running the App* poin ke-3. Argumen String yang mungkin digunakan untuk saat ini berjumlah 8. 
+   - Untuk *Running the App* poin ke-3. Argumen String yang mungkin digunakan untuk saat ini berjumlah 8 : 
       1. `rem` 
       2. `miku` 
       3. `hina` 
@@ -94,5 +96,7 @@ UML image here
       6. `watson` 
       7. `yunyun` 
       8. `eriri` 
-   - Game memiliki fitur *number of clicks* dan *high score* sebagai tambahan. *High score* adalah *number of clicks* paling sedikit yang dibutuhkan untuk menyelesaikan puzzle tersebut selama satu sesi.
+   - Game memiliki fitur **number of clicks** dan **high score** sebagai tambahan. **High score** adalah **number of clicks** paling sedikit yang dibutuhkan untuk menyelesaikan puzzle tersebut selama satu sesi.
    - Ketika puzzle dimainkan dengan mode *custom*, akan ada **example** yang merupakan hasil akhir ketika puzzle tersusun dengan rapih. 
+   - Jika ingin mengganti mode, user harus memulai ulang program dan mengetikkan mode yang ingin dimainkan. 
+   - Terdapat tombol **Reset** yang dapat digunakan untuk mengacak puzzle. Reset hanya akan berfungsi ketika blankPos berada di posisi paling kanan bawah. Jika user melakukan reset ketika blankPos tidak di tempat seharusnya, akan muncul warning popup. 
